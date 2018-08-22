@@ -1,0 +1,10 @@
+.navLink,
+a {
+  color: white;
+}
+
+.logoHeader {
+  display: grid;
+  grid-template-areas: 'header header header header header header';
+  color: white;
+}
