@@ -1,18 +1,24 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './header.css'
+import styled from 'styled-components'
 import logo from '../images/empire.png'
 import logo2 from '../images/oldRepublic.png'
+
+const HeaderWrapper = styled.div`
+  background: maroon;
+  margin-bottom: 1.45rem;
+  .logoHeader {
+    height: 150px;
+    display: grid;
+    grid-template-areas: 'header header header header header header';
+  }
+`
 
 // console.log(logo)
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'maroon',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <HeaderWrapper>
     <div
       style={{
         margin: '0 auto',
@@ -48,9 +54,12 @@ const Header = ({ siteTitle }) => (
         <li>
           <Link to="/about">About</Link>
         </li>
+        <li>
+          <Link to="/new-page">New Page</Link>
+        </li>
       </ul>
     </nav>
-  </div>
+  </HeaderWrapper>
 )
 
 export default Header
